@@ -73,7 +73,12 @@ const Graph = () => {
             <div className="flex justify-center text-center pb-4 font-semibold gap-4 text-white">
                 <div>
                     Cases
-                    <Checkbox
+                    <Checkbox sx={{
+                        color: 'white',
+                        '&.Mui-checked': {
+                            color: 'white',
+                        },
+                    }}
                         checked={casesShow}
                         onChange={() => {
                             setCasesShow(casesShow ? false : true);
@@ -82,7 +87,12 @@ const Graph = () => {
                 </div>
                 <div>
                     Deaths
-                    <Checkbox
+                    <Checkbox sx={{
+                        color: 'white',
+                        '&.Mui-checked': {
+                            color: 'white',
+                        },
+                    }}
                         checked={deathsShow}
                         onChange={() => {
                             setDeathsShow(deathsShow ? false : true);
@@ -91,7 +101,16 @@ const Graph = () => {
                 </div>
                 <div>
                     Recovered
+                    {/* <input className={`appearance-none border border-white hover:cursor-pointer bg-transparent rounded-sm p-2`} type="checkbox" name="" id="" checked={recoveredShow} onChange={() => {
+                        setRecoveredShow(recoveredShow ? false : true);
+                    }} /> */}
                     <Checkbox
+                        sx={{
+                            color: 'white',
+                            '&.Mui-checked': {
+                                color: 'white',
+                            },
+                        }}
                         checked={recoveredShow}
                         onChange={() => {
                             setRecoveredShow(recoveredShow ? false : true);

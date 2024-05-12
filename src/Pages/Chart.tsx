@@ -13,7 +13,7 @@ const Chart = () => {
     return (
         <div className='min-h-screen chart-body'>
             <div className="w-full flex flex-col items-center">
-                <div className=" rounded-md shadow-md pt-2 gap-5 flex flex-col md:flex-row  text-white">
+                <div className=" rounded-md shadow-md pt-2 gap-0 md:gap-3 flex flex-row  text-white">
                     <button
                         className={`text-xl shadow-md  md:text-2xl font-semibold py-2 px-4 rounded-md focus:outline-none ${showMap ? 'bg-[#515151] text-white' : 'hover:bg-gray-300'}`}
                         onClick={() => {

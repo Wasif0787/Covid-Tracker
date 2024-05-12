@@ -23,7 +23,7 @@ const DashBoard = () => {
     return (
         <div className="flex flex-col justify-center items-center">
             <h1 className="font-bold text-lg">Global Cases</h1>
-            <div className='grid md:grid-cols-3 gap-8 md:gap-12'>
+            <div className='grid grid-cols-2 sm:grid-cols-4 gap-8 md:gap-12'>
                 <div className={`relative border border-gray-200 rounded-lg shadow md:max-w-xl bg-gray-500 dark:border-gray-700   hover:bg-opacity-75 transition-colors duration-300 ease-in-out `}>
                     <div className="p-4">
                         <h5 className="mb-2 text-2xl font-bold tracking-tight break-words overflow-hidden">

@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 body {
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .chart-body {
-    background-image: url("/globe.jpeg");
+    background-image: url("/world.jpg");
     background-size: cover;
     /* Cover the entire background */
     background-position: center;
