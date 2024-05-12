@@ -1,7 +1,7 @@
 import "leaflet/dist/leaflet.css";
 import { useQuery } from "@tanstack/react-query";
-import { createCustomIcon } from "./CreateCustomIcon";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import { Icon } from "leaflet";
 
 
 interface CountryData {
@@ -14,6 +14,7 @@ interface CountryData {
 interface CountryInfo {
     lat: number;
     long: number;
+    flag: string;
 }
 
 
@@ -55,7 +56,14 @@ function Map() {
 
                     {data.map((elem: CountryData) => (
                         <Marker
-                            icon={createCustomIcon}
+                            icon={
+                                new Icon({
+                                    iconUrl: elem.countryInfo.flag,
+                                    iconSize: [35, 25],
+                                    iconAnchor: [0, 0],
+                                    popupAnchor: [-3, -76],
+                                })
+                            }
                             key={elem.country}
                             position={[elem.countryInfo.lat, elem.countryInfo.long]}
                         >
