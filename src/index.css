@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    /* overflow: hidden; */
+}
+
+.chart-body {
+    background-image: url("/globe.jpeg");
+    background-size: cover;
+    /* Cover the entire background */
+    background-position: center;
+    /* Center the background image */
+    background-repeat: no-repeat;
+    /* Prevent the background from repeating */
+    background-attachment: fixed;
+    /* Set solid background color */
+}
+
+.glass-container {
+    background: rgba(255, 255, 255, 0.441);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(13.5px);
+    -webkit-backdrop-filter: blur(13.5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
