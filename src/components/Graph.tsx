@@ -2,6 +2,7 @@ import { LineChart } from "@mui/x-charts";
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import Checkbox from "@mui/material/Checkbox";
+import Spinner from "./Spinner";
 
 
 const Graph = () => {
@@ -24,10 +25,11 @@ const Graph = () => {
     // if (loading) return <Lottie options={defaultOptions1} height={200} width={200} />;
     // if (loading2) return <Lottie options={defaultOptions2} height={100} width={100} />;
 
-    if (isPending) return <>
-        {/* <Lottie options={defaultOptions2} height={100} width={100} /> */}
-        <h1>Loading</h1>
-    </>;
+    if (isPending) return (
+        <div className="flex justify-center">
+            <Spinner />
+        </div>
+    )
     if (error) return <>"An error has occurred: " + {error.message}</>;
     return (
         <div className="w-full">

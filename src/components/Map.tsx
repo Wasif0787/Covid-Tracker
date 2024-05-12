@@ -2,6 +2,7 @@ import "leaflet/dist/leaflet.css";
 import { useQuery } from "@tanstack/react-query";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { Icon } from "leaflet";
+import Spinner from "./Spinner";
 
 
 interface CountryData {
@@ -29,14 +30,11 @@ function Map() {
             ),
     });
 
-
-    // if (loading) return <Lottie options={defaultOptions1} height={200} width={200} />;
-    // if (loading2) return <Lottie options={defaultOptions2} height={100} width={100} />;
-
-    if (isPending) return <>
-        {/* <Lottie options={defaultOptions2} height={100} width={100} /> */}
-        <h1>Loading</h1>
-    </>;
+    if (isPending) return (
+        <div className="flex justify-center">
+            <Spinner />
+        </div>
+    )
 
     if (error) return <>"An error has occurred: " + {error.message}</>;
 

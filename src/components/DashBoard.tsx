@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import Spinner from "./Spinner";
 
 const DashBoard = () => {
 
@@ -14,8 +15,9 @@ const DashBoard = () => {
     // if (loading2) return <Lottie options={defaultOptions2} height={100} width={100} />;
 
     if (isPending) return (
-        // <Lottie options={defaultOptions2} height={100} width={100} />
-        <h1>Loading</h1>
+        <div className="flex justify-center">
+            <Spinner />
+        </div>
     )
 
     if (error) return <>"An error has occurred: " + {error.message}</>;
