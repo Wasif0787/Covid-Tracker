@@ -24,7 +24,6 @@ const DashBoard = () => {
 
     return (
         <div className="flex flex-col justify-center items-center">
-            <h1 className="font-bold text-lg">Global Cases</h1>
             <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg gap-8 md:gap-12'>
                 <div className={`relative border border-gray-200 rounded-lg shadow md:max-w-xl bg-gray-500 dark:border-gray-700   hover:bg-opacity-75 transition-colors duration-300 ease-in-out `}>
                     <div className="p-4">
