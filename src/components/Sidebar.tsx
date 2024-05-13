@@ -67,7 +67,7 @@ const Sidebar = () => {
             </aside>
             <QueryClientProvider client={queryClient}>
                 <div className="flex">
-                    <div className="p-4 sm:ml-64 md:pt-10 flex-grow">
+                    <div className="p-4 sm:ml-64 md:pt-10 flex-grow z-0">
                         {showMap && <Map />}
                         {showGraph && <Graph />}
                         {showDashboard && <DashBoard />}

@@ -40,7 +40,7 @@ function Map() {
 
     return (
         <>
-            <div className="flex justify-center h-screen w-full pb-5">
+            <div className="flex justify-center h-screen w-full pb-2">
                 <MapContainer
                     className="h-full w-full"
                     center={[data[94].countryInfo.lat, data[94].countryInfo.long]}
