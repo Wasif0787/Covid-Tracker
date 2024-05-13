@@ -10,20 +10,13 @@ const Graph = () => {
     const [recoveredShow, setRecoveredShow] = useState(false);
     const [deathsShow, setDeathsShow] = useState(false);
 
-
-
     const { isPending, error, data } = useQuery({
         queryKey: ["repoData"],
         queryFn: () =>
-            fetch("https://disease.sh/v3/covid-19/historical/all?lastdays=all#").then(
+            fetch("https://disease.sh/v3/covid-19/historical/all?lastdays=all").then(
                 (res) => res.json()
             ),
     });
-
-
-
-    // if (loading) return <Lottie options={defaultOptions1} height={200} width={200} />;
-    // if (loading2) return <Lottie options={defaultOptions2} height={100} width={100} />;
 
     if (isPending) return (
         <div className="flex justify-center">

@@ -3,10 +3,6 @@
 @tailwind utilities;
 
 body {
-    overflow: hidden;
-}
-
-body {
     background-image: url("/world.jpg");
     background-size: cover;
     /* Cover the entire background */

@@ -24,7 +24,8 @@ const Sidebar = () => {
                 <div className="h-full px-3 py-4 overflow-y-auto bg-gray-800">
                     <ul className="space-y-2 font-medium">
                         <li>
-                            <a onClick={() => {
+                            <a onClick={(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+                                e.preventDefault()
                                 setShowMap(false); // Set other states to false
                                 setShowGraph(false); // Set other states to false
                                 setShowDashboard(true);
@@ -37,7 +38,8 @@ const Sidebar = () => {
                             </a>
                         </li>
                         <li>
-                            <a onClick={() => {
+                            <a onClick={(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+                                e.preventDefault()
                                 setShowMap(false); // Set other states to false
                                 setShowGraph(true);
                                 setShowDashboard(false); // Set other states to false
@@ -50,7 +52,8 @@ const Sidebar = () => {
                             </a>
                         </li>
                         <li>
-                            <a onClick={() => {
+                            <a onClick={(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+                                e.preventDefault()
                                 setShowMap(true);
                                 setShowGraph(false); // Set other states to false
                                 setShowDashboard(false); // Set other states to false
