@@ -1,12 +1,10 @@
-import Chart from "./Pages/Chart"
-import Header from "./components/Header"
+import Sidebar from "./components/Sidebar"
 
 function App() {
 
   return (
     <>
-      <Header />
-      <Chart />
+      <Sidebar />
     </>
   )
 }

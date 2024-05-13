@@ -40,9 +40,9 @@ function Map() {
 
     return (
         <>
-            <div className="flex justify-center items-center h-96">
+            <div className="flex justify-center h-screen w-full pb-5">
                 <MapContainer
-                    className="h-full w-screen"
+                    className="h-full w-full"
                     center={[data[94].countryInfo.lat, data[94].countryInfo.long]}
                     zoom={4}
                     scrollWheelZoom={true}

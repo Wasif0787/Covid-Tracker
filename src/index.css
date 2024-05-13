@@ -6,7 +6,7 @@ body {
     overflow: hidden;
 }
 
-.chart-body {
+body {
     background-image: url("/world.jpg");
     background-size: cover;
     /* Cover the entire background */
